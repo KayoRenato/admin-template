@@ -11,11 +11,11 @@
 <p align="center">
   <a href="#dart-about">About</a> &#xa0; | &#xa0;
   <a href="#sparkles-features">Features</a> &#xa0; | &#xa0;
-  <a href="#computer-technologies-&-requirements">Technologies & Requirements</a> &#xa0; | &#xa0;
+  <a href="#computer-technologies--requirements">Technologies & Requirements</a> &#xa0; | &#xa0;
   <a href="#art-architecture">Architecture</a> &#xa0; | &#xa0;
   <a href="#checkered_flag-starting">Starting</a> &#xa0; | &#xa0;
   <a href="#memo-license">License</a> &#xa0; | &#xa0;
-  <a href="#gen-deploy-&-repository">Deploy & Repository</a> &#xa0; | &#xa0;
+  <a href="#gen-deploy--repository">Deploy & Repository</a> &#xa0; | &#xa0;
   <a href="https://github.com/KayoRenato" target="_blank">Author</a>
 </p>
 
