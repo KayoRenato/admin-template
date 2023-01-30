@@ -76,15 +76,17 @@ $ yarn dev
 
 This project is under license from MIT. For more details, see the [LICENSE](License.md) file.
 
-Buy me a :coffee: by <a href="https://www.linkedin.com/in/kayo-renato/" target="_blank">KayoRenato</a>
-
-<img src="public/buy_coffee.jpeg" alt="buy me a coffee" width="150" height="150">
-
 ## :gem: Deploy & Repository ##
 
 <a href="https://www.kayoio.com" target="_blank">:rocket: Link to solution deployed</a>
 
 <a href="https://github.com/KayoRenato" target="_blank">:octopus: Link to repository</a>
+ 
+<br>
+
+Donate behind the QR code if this work helps you and you want to collaborate with a coffee :coffee:.
+
+<img src="public/buy_coffee.jpeg" alt="buy me a coffee" width="150" height="150">
 
 ---
 
