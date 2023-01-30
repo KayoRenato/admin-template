@@ -82,7 +82,7 @@ Buy me a :coffee: by <a href="https://www.linkedin.com/in/kayo-renato/" target="
 
 ## :gem: Deploy & Repository ##
 
-<a href="https://www.kayoio.com" target="_blank">:rocket: Link to solution deploied</a>
+<a href="https://www.kayoio.com" target="_blank">:rocket: Link to solution deployed</a>
 
 <a href="https://github.com/KayoRenato" target="_blank">:octopus: Link to repository</a>
 
