@@ -1,9 +1,9 @@
-import Layout from "../components/Layout";
+import Layout from "../components/templates/Layout";
 
 export default function Home() {
   return (
-    <Layout title='Title' subtitle="Subtitle" >
-      <p>Content Text</p>
+    <Layout title='Dashboard' subtitle="Management Information" >
+      <p>Content about OKR of product.</p>
     </Layout>
   )
 }

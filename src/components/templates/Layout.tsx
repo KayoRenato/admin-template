@@ -11,7 +11,7 @@ interface LayoutProps {
 
 export default function Layout(props: LayoutProps) {
     return (
-        <div className={`dark flex w-screen h-screen`}>
+        <div className={`flex w-screen h-screen`}>
             <Sidebar>
                 <li>Menu</li>
                 <li>Create</li>
@@ -20,7 +20,7 @@ export default function Layout(props: LayoutProps) {
             <div className={`
                 flex-col
                 bg-gray-200
-                dark:bg-gray-800
+                dark:bg-gray-700
                 w-full
                 p-6
                 `}>
