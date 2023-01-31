@@ -11,12 +11,24 @@ interface LayoutProps {
 
 export default function Layout(props: LayoutProps) {
     return (
-        <div>
-            <Topbar title={props.title} subtitle={props.subtitle} />
-            <Sidebar />
-            <Content>
-                {props.children}
-            </Content>
+        <div className={`dark flex w-screen h-screen`}>
+            <Sidebar>
+                <li>Menu</li>
+                <li>Create</li>
+                <li>Report</li>
+            </Sidebar>
+            <div className={`
+                flex-col
+                bg-gray-200
+                dark:bg-gray-800
+                w-full
+                p-6
+                `}>
+                <Topbar title={props.title} subtitle={props.subtitle} />
+                <Content>
+                    {props.children}
+                </Content>
+            </div>
         </div>
     );
 }

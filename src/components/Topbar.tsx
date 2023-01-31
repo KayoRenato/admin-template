@@ -7,8 +7,8 @@ interface TopbarProps {
 
 export default function Topbar(props: TopbarProps) {
     return (
-        <nav>
+        <header>
             <Title title={props.title} subtitle={props.subtitle} />
-        </nav>
+        </header>
     )
 }
