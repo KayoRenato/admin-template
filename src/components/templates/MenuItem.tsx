@@ -5,6 +5,7 @@ interface MenuItemProps {
     text: string
     icon: any
     onClick?: (event: any) => void
+    className?: string
 }
 
 export default function MenuItem(props: MenuItemProps) {
@@ -13,12 +14,13 @@ export default function MenuItem(props: MenuItemProps) {
         return (
             <a className={`
             flex flex-col justify-center items-center
-            h-16 w-16 m-4
+            h-16 w-16 m-4 text-gray-600
+            ${props.className}
             `}>
                 {props.icon}
                 <span className={
                     `
-                    text-xs font-normal text-gray-600
+                    text-xs font-normal 
                 `
                 }>
                     {props.text}
