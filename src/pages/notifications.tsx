@@ -1,11 +1,15 @@
 import Layout from "../components/templates/Layout";
+import useAppData from "../data/hook/useAppData";
 
 export default function Home() {
+    const ctx = useAppData()
     return (
         <Layout title='Notifications'
             subtitle="Manage your notifications"
         >
-            <p>Content About Notifications</p>
+            <p>{ctx.name}</p>
+
+            {/* <p>Content About Notifications</p> */}
         </Layout>
     )
 }
