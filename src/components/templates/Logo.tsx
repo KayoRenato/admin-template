@@ -1,13 +1,40 @@
-export default function Logo(){
+import Link from "next/link";
+import React from "react";
+import useAppData from "../../data/hook/useAppData";
+import { DarkIcon, LightIcon } from "../icons";
+
+export default function Logo() {
+    const { theme, changeTheme } = useAppData()
+
+    function renderTheme() {
+        return theme === 'dark' ? (
+            LightIcon
+        ) : (
+            DarkIcon
+
+        );
+    }
+
     return (
-        <div className={
+        <button className={
             `
             h-12 w-12
-            bg-gradient-to-tr from-gray-200 via-slate-400 to-slate-600
-            dark:bg-gradient-to-bl dark:from-slate-500 dark:via-slate-700 dark:to-gray-900 rounded-full
+            flex items-center justify-center
+            bg-gradient-to-bl from-slate-500 via-slate-700 to-gray-900 rounded-full
+            dark:bg-gradient-to-tr dark:from-gray-200 dark:via-slate-400 dark:to-slate-600
             shadow-lg
+
+            dark:text-gray-900
+            text-gray-200
+
             `
-        }/>
+        } onClick={changeTheme}>
+
+            {renderTheme()}
+
+        </button>
+
+
 
     )
 }

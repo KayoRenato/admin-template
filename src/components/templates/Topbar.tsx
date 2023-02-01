@@ -1,3 +1,4 @@
+import { DarkIcon } from "../icons"
 import Title from "./Title"
 
 interface TopbarProps {
@@ -7,7 +8,9 @@ interface TopbarProps {
 
 export default function Topbar(props: TopbarProps) {
     return (
-        <header>
+        <header className={`
+        flex flex-row justify-between 
+        `}>
             <Title title={props.title} subtitle={props.subtitle} />
         </header>
     )

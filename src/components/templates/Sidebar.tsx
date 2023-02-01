@@ -1,3 +1,4 @@
+import useAppData from "../../data/hook/useAppData"
 import { AdjustIcon, DashboardIcon, LogoutIcon, NotificationIcon } from "../icons"
 import Logo from "./Logo"
 import MenuItem from "./MenuItem"
@@ -7,6 +8,9 @@ interface SidebarProps {
 }
 
 export default function Sidebar(props: SidebarProps) {
+
+    const { changeTheme } = useAppData()
+    
     return (
         <nav className={
             `
