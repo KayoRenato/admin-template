@@ -11,7 +11,9 @@ interface LayoutProps {
 
 export default function Layout(props: LayoutProps) {
     return (
-        <div className={`flex w-screen h-screen`}>
+        <div className={`
+         flex w-screen h-screen
+        `}>
             <Sidebar>
                 <li>Menu</li>
                 <li>Create</li>
@@ -19,11 +21,11 @@ export default function Layout(props: LayoutProps) {
             </Sidebar>
             <div className={`
                 flex-col
-                bg-gray-200
-                dark:bg-gray-700
                 w-full
                 p-6
-                `}>
+                bg-slate-300
+                dark:bg-gray-700
+            `}>
                 <Topbar title={props.title} subtitle={props.subtitle} />
                 <Content>
                     {props.children}

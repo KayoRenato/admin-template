@@ -14,7 +14,9 @@ export default function MenuItem(props: MenuItemProps) {
         return (
             <a className={`
             flex flex-col justify-center items-center
-            h-16 w-16 m-4 text-gray-600
+            h-16 w-16 m-4 
+            text-gray-900
+            dark:text-gray-200
             ${props.className}
             `}>
                 {props.icon}
@@ -30,7 +32,16 @@ export default function MenuItem(props: MenuItemProps) {
     }
 
     return (
-        <li onClick={props.onClick} className={` hover:bg-gray-100 hover:text-gray-800 cursor-pointer`}>
+        <li onClick={props.onClick} 
+            className={`
+                hover:bg-gray-300
+                hover:text-gray-800 
+
+                dark:hover:bg-slate-800
+                dark:hover:text-gray-400 
+
+                cursor-pointer
+            `}>
             {props.url ? (
                 <Link href={props.url} legacyBehavior>
                     {renderLink()}
