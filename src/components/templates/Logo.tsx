@@ -1,4 +1,3 @@
-import Link from "next/link";
 import React from "react";
 import useAppData from "../../data/hook/useAppData";
 import { DarkIcon, LightIcon } from "../icons";
