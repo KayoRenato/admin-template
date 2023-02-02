@@ -20,12 +20,15 @@ export default function Sidebar(props: SidebarProps) {
 
             dark:bg-slate-900  
             dark:text-gray-300
+
+
             `
         }>
             <div className={
                 `
                 flex flex-col justify-center items-center
                 h-16 w-16 m-4
+                p-2
                 bg-gradient-to-bl from-purple-500 via-orange-300  to-yellow-500 rounded-full
                 `
             }>

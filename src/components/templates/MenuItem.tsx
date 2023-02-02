@@ -22,7 +22,9 @@ export default function MenuItem(props: MenuItemProps) {
                 {props.icon}
                 <span className={
                     `
-                    text-xs font-normal 
+                    hidden sm:flex text-xs
+                    hidden max-sm: font-normal
+
                 `
                 }>
                     {props.text}
