@@ -1,15 +1,42 @@
 import { type } from "os";
 import { useState } from "react";
 import AuthInput from "../components/auth/AuthInput";
-import { GoogleLogo } from "../components/icons";
+import { ErrorIcon, GoogleLogo } from "../components/icons";
 
 export default function Authentication() {
 
     type ModeType = 'login' | "createAccount";
 
     const [mode, setMode] = useState<ModeType>('createAccount')
+    const [error, setError] = useState('')
     const [email, setEmail] = useState('')
     const [passwordInput, setPasswordInput] = useState('')
+
+    function renderError(msgError: string) {
+        return (
+            <div className={`
+            flex flex-row justify-start items-center
+            text-red-500 text-sm p-2
+            `}>
+                {ErrorIcon}<span className="ml-2">{msgError}</span>
+            </div>
+        )
+    }
+
+    function alertError(msg: string, timeMsg: number = 5000) {
+        setError(msg)
+        setTimeout(() => setError(''), timeMsg)
+    }
+
+    function submit() {
+        if (mode === "login") {
+            console.log('Login')
+            alertError('Occurred error during Login')
+        } else {
+            console.log('Create Account')
+            alertError('Occurred error during Create Account')
+        }
+    }
 
     return (
         <div className={`
@@ -51,6 +78,7 @@ export default function Authentication() {
                     mb-8
                     `
                     }>{mode === 'login' ? 'Enter your account' : 'Register now'}</h1>
+                    {error ? renderError(error) : false}
                     <AuthInput
                         label="Email"
                         value={email}
@@ -78,8 +106,7 @@ export default function Authentication() {
                     bg-blue-600
                     hover:bg-blue-500
                     `
-                    }>{mode === 'login' ? 'Sign in' : 'Sign up'}</button>
-
+                    } onClick={submit}>{mode === 'login' ? 'Sign in' : 'Sign up'}</button>
 
                     <hr className={`my-6 border-gray-300 w-full`} />
 
@@ -104,9 +131,9 @@ export default function Authentication() {
                     {mode === 'login' ? (
                         // eslint-disable-next-line react/no-unescaped-entities
                         <p> Didn't you still register?
-                            <a onClick={() => setMode("createAccount")} className={
+                            <a onClick={() => { setMode("createAccount"), setError('') }} className={
                                 `
-                                text-blue-500 hover:text-blue-700 font-semibold cursor-pointer
+                                text-blue-500 hover:text-blue-700 cursor-pointer
                                 `
                             }> Sign up for free today </a>
                         </p>
@@ -115,7 +142,7 @@ export default function Authentication() {
 
                         // eslint-disable-next-line react/no-unescaped-entities
                         <p> Use your email to
-                            <a onClick={() => setMode("login")} className={
+                            <a onClick={() => { setMode("login"), setError('') }} className={
                                 `
                                 text-blue-500 hover:text-blue-700  cursor-pointer
                                 `
