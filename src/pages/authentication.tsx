@@ -2,8 +2,11 @@ import { type } from "os";
 import { useState } from "react";
 import AuthInput from "../components/auth/AuthInput";
 import { ErrorIcon, GoogleLogo } from "../components/icons";
+import useAuthData from "../data/hook/useAuthData";
 
 export default function Authentication() {
+
+    const { user, loginGoogle } = useAuthData()
 
     type ModeType = 'login' | "createAccount";
 
@@ -52,11 +55,13 @@ export default function Authentication() {
 
             }>
                 <picture>
-                    <img
+                    {/* <img
                         src="https://source.unsplash.com/random"
                         alt="random image of the authentication screen"
                         className={`h-screen w-full object-cover`}
-                    />
+                    /> */}
+                    {/* <iframe className={`h-screen w-full object-cover bg-slate-300`}  src="https://embed.lottiefiles.com/animation/75082"></iframe> */}
+                    <iframe className={`h-screen w-full object-cover bg-slate-300`}  src="https://embed.lottiefiles.com/animation/78078"></iframe>
                 </picture>
 
             </div>
@@ -79,38 +84,41 @@ export default function Authentication() {
                     `
                     }>{mode === 'login' ? 'Enter your account' : 'Register now'}</h1>
                     {error ? renderError(error) : false}
-                    <AuthInput
-                        label="Email"
-                        value={email}
-                        onChange={setEmail}
-                        type="email"
-                        placeholder="Insert your email"
-                        isRequired
-                    />
-                    <AuthInput
-                        label="Password"
-                        value={passwordInput}
-                        onChange={setPasswordInput}
-                        type="password"
-                        placeholder="Enter your password"
-                        isRequired
-                    />
-                    <button className={
+                    <form action="#">
+
+                        <AuthInput
+                            label="Email"
+                            value={email}
+                            onChange={setEmail}
+                            type="email"
+                            placeholder="Insert your email"
+                            isRequired
+                        />
+                        <AuthInput
+                            label="Password"
+                            value={passwordInput}
+                            onChange={setPasswordInput}
+                            type="password"
+                            placeholder="Enter your password"
+                            isRequired
+                        />
+                        <button className={
+                            `
+                        w-full
+                        text-white
+                        font-semibold
+                        mt-6
+                        h-11
+                        rounded-md
+                        bg-blue-600
+                        hover:bg-blue-500
                         `
-                    w-full
-                    text-white
-                    font-semibold
-                    mt-6
-                    h-11
-                    rounded-md
-                    bg-blue-600
-                    hover:bg-blue-500
-                    `
-                    } onClick={submit}>{mode === 'login' ? 'Sign in' : 'Sign up'}</button>
+                        } onClick={submit}>{mode === 'login' ? 'Sign in' : 'Sign up'}</button>
+                    </form>
 
                     <hr className={`my-6 border-gray-300 w-full`} />
 
-                    <button className={
+                    <button onClick={loginGoogle} className={
                         `
                     flex flex-row
                     justify-center

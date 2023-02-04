@@ -42,6 +42,7 @@ export default function AuthInput(props: AuthProps) {
                 value={props.value}
                 onChange={event => props.onChange?.(event.target.value)}
                 placeholder={props.placeholder}
+                autoComplete={props.value}
             />
         </div>
     )
