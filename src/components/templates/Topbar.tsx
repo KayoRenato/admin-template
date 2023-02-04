@@ -1,4 +1,5 @@
 import { DarkIcon } from "../icons"
+import AvatarUser from "./AvatarUser"
 import Title from "./Title"
 
 interface TopbarProps {
@@ -12,6 +13,7 @@ export default function Topbar(props: TopbarProps) {
         flex flex-row justify-between 
         `}>
             <Title title={props.title} subtitle={props.subtitle} />
+            <AvatarUser className={`max-sm:hidden`}/>
         </header>
     )
 }

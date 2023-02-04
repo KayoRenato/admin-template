@@ -1,5 +1,6 @@
 import useAppData from "../../data/hook/useAppData"
 import { AdjustIcon, DashboardIcon, LogoutIcon, NotificationIcon } from "../icons"
+import AvatarUser from "./AvatarUser"
 import Logo from "./Logo"
 import MenuItem from "./MenuItem"
 
@@ -10,7 +11,7 @@ interface SidebarProps {
 export default function Sidebar(props: SidebarProps) {
 
     const { changeTheme } = useAppData()
-    
+
     return (
         <nav className={
             `
@@ -37,7 +38,6 @@ export default function Sidebar(props: SidebarProps) {
             <ul className={
                 `
                 flex-grow
-
                 `
             }>
                 <MenuItem url="/" text="Dashboard" icon={DashboardIcon} />
@@ -45,7 +45,16 @@ export default function Sidebar(props: SidebarProps) {
                 <MenuItem url="/configurations" text="Configurations" icon={AdjustIcon} />
             </ul>
 
-            <ul>
+            <ul className={
+                `
+                 flex-end
+                `}
+            >
+                <AvatarUser sideBar
+                    className={`
+                    sm:hidden
+                    rounded-none`} />
+
                 <MenuItem onClick={() => {
                     confirm('Do you wish logout?') ? alert('See you later!') : false
                 }} text="Logout" icon={LogoutIcon}
@@ -58,6 +67,6 @@ export default function Sidebar(props: SidebarProps) {
                           hover:mx-0
                           hover:p-0`} />
             </ul>
-        </nav>
+        </nav >
     )
 }

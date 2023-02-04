@@ -55,12 +55,6 @@ export default function Authentication() {
 
             }>
                 <picture>
-                    {/* <img
-                        src="https://source.unsplash.com/random"
-                        alt="random image of the authentication screen"
-                        className={`h-screen w-full object-cover`}
-                    /> */}
-                    {/* <iframe className={`h-screen w-full object-cover bg-slate-300`}  src="https://embed.lottiefiles.com/animation/75082"></iframe> */}
                     <iframe className={`h-screen w-full object-cover bg-slate-300`}  src="https://embed.lottiefiles.com/animation/78078"></iframe>
                 </picture>
 
