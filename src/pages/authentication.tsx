@@ -5,9 +5,9 @@ import { GoogleLogo } from "../components/icons";
 
 export default function Authentication() {
 
-    type ModeType = 'login' | "externAuth"
+    type ModeType = 'login' | "createAccount";
 
-    const [mode, setMode] = useState<ModeType>('externAuth')
+    const [mode, setMode] = useState<ModeType>('createAccount')
     const [email, setEmail] = useState('')
     const [passwordInput, setPasswordInput] = useState('')
 
@@ -47,10 +47,10 @@ export default function Authentication() {
                         `
                     text-2xl
                     font-semibold
-                    text-center
+                    text-left
                     mb-8
                     `
-                    }>Login</h1>
+                    }>{mode === 'login' ? 'Enter your account' : 'Register now'}</h1>
                     <AuthInput
                         label="Email"
                         value={email}
@@ -78,9 +78,8 @@ export default function Authentication() {
                     bg-blue-600
                     hover:bg-blue-500
                     `
-                    }>
-                        Sign in
-                    </button>
+                    }>{mode === 'login' ? 'Sign in' : 'Sign up'}</button>
+
 
                     <hr className={`my-6 border-gray-300 w-full`} />
 
@@ -103,23 +102,24 @@ export default function Authentication() {
                         {GoogleLogo} Sign in with Google
                     </button>
                     {mode === 'login' ? (
-                        <p>
-                            <a onClick={() => setMode("externAuth")} className={
+                        // eslint-disable-next-line react/no-unescaped-entities
+                        <p> Didn't you still register?
+                            <a onClick={() => setMode("createAccount")} className={
                                 `
                                 text-blue-500 hover:text-blue-700 font-semibold cursor-pointer
                                 `
-                            }> Sign up</a>
+                            }> Sign up for free today </a>
                         </p>
 
                     ) : (
 
                         // eslint-disable-next-line react/no-unescaped-entities
-                        <p>Didn't you still register?
-                            <a onClick={() => setMode("externAuth")} className={
+                        <p> Use your email to
+                            <a onClick={() => setMode("login")} className={
                                 `
                                 text-blue-500 hover:text-blue-700  cursor-pointer
                                 `
-                            }> Sign up now</a>
+                            }> Sign in</a>
                         </p>
                     )}
                 </div>
