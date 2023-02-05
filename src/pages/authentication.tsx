@@ -6,13 +6,13 @@ import useAuthData from "../data/hook/useAuthData";
 
 export default function Authentication() {
 
-    const { user, loginGoogle } = useAuthData()
+    const { login, createAcc, loginGoogle } = useAuthData()
 
     type ModeType = 'login' | "createAccount";
 
     const [mode, setMode] = useState<ModeType>('createAccount')
     const [error, setError] = useState('')
-    const [email, setEmail] = useState('')
+    const [emailInput, setEmail] = useState('')
     const [passwordInput, setPasswordInput] = useState('')
 
     function renderError(msgError: string) {
@@ -31,14 +31,17 @@ export default function Authentication() {
         setTimeout(() => setError(''), timeMsg)
     }
 
-    function submit() {
-        if (mode === "login") {
-            console.log('Login')
-            alertError('Occurred error during Login')
-        } else {
-            console.log('Create Account')
-            alertError('Occurred error during Create Account')
+    async function submit() {
+        try {
+            if (mode === "login") {
+                await login(emailInput, passwordInput)
+            } else {
+                await createAcc(emailInput, passwordInput)
+            }
+        } catch (error) {
+            alertError(error?.message ?? 'Occurred error during Login')
         }
+
     }
 
     return (
@@ -55,7 +58,7 @@ export default function Authentication() {
 
             }>
                 <picture>
-                    <iframe className={`h-screen w-full object-cover bg-slate-300`}  src="https://embed.lottiefiles.com/animation/78078"></iframe>
+                    <iframe className={`h-screen w-full object-cover bg-slate-300`} src="https://embed.lottiefiles.com/animation/78078"></iframe>
                 </picture>
 
             </div>
@@ -82,7 +85,7 @@ export default function Authentication() {
 
                         <AuthInput
                             label="Email"
-                            value={email}
+                            value={emailInput}
                             onChange={setEmail}
                             type="email"
                             placeholder="Insert your email"
