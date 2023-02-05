@@ -1,6 +1,6 @@
-<div align="center" id="top"> 
+<!-- <div align="center" id="top"> 
   <img src="/public/admin-panel.gif" alt="Template Admin Panel" />
-</div>
+</div> -->
 
 <h4 align="center">
 📊 POC: Template Admin Panel 📊
@@ -27,15 +27,15 @@ The proof of concept (POC) has developed to understand ideas and expand learning
 
 ## :sparkles: Features ##
 
-:ballot_box_with_check: Sign up with google and email through Firebase;
-:ballot_box_with_check: Sign in with google and email through Firebase;
-:ballot_box_with_check: Sign out of application;
-:ballot_box_with_check: Deploy of application with environment variables dynamic and domain name custom;
-:ballot_box_with_check: Dark and light theme;
-:ballot_box_with_check: Token authentication is cached in the cookie;
-:ballot_box_with_check: Theme state cached in LocalStorage;
-:black_square_button: To finish responsively interface;
-:black_square_button: To implement an option to custom theme.
+:ballot_box_with_check: Sign up with google and email through Firebase;  
+:ballot_box_with_check: Sign in with google and email through Firebase;  
+:ballot_box_with_check: Sign out of application;  
+:ballot_box_with_check: Deploy of application with environment variables dynamic and domain name custom;  
+:ballot_box_with_check: Dark and light theme;  
+:ballot_box_with_check: Token authentication is cached in the cookie;  
+:ballot_box_with_check: Theme state cached in LocalStorage;  
+:black_square_button: To finish responsively interface;  
+:black_square_button: To implement an option to custom theme.  
 
 
 ## :computer: Technologies & Requirements ##
@@ -52,7 +52,7 @@ The following dependencies were used in this project:
 
 ## :clapper: Show Off ##
 
-<img src="public/admin-panel.gif" alt="show off application" width="1140" height="641">
+<img src="public/admin-panel.gif" alt="show off application" width="1280" height="800">
 
 ## :checkered_flag: Starting ##
 
