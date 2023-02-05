@@ -1,4 +1,5 @@
 import useAppData from "../../data/hook/useAppData"
+import useAuthData from "../../data/hook/useAuthData"
 import { AdjustIcon, DashboardIcon, LogoutIcon, NotificationIcon } from "../icons"
 import AvatarUser from "./AvatarUser"
 import Logo from "./Logo"
@@ -10,7 +11,7 @@ interface SidebarProps {
 
 export default function Sidebar(props: SidebarProps) {
 
-    const { changeTheme } = useAppData()
+    const { logout } = useAuthData()
 
     return (
         <nav className={
@@ -55,9 +56,7 @@ export default function Sidebar(props: SidebarProps) {
                     sm:hidden
                     rounded-none`} />
 
-                <MenuItem onClick={() => {
-                    confirm('Do you wish logout?') ? alert('See you later!') : false
-                }} text="Logout" icon={LogoutIcon}
+                <MenuItem onClick={logout} text="Logout" icon={LogoutIcon}
                     className={
                         `
                         text-red-700
