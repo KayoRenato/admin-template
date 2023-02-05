@@ -43,7 +43,7 @@ export default function AvatarUser(props: AvatarUserProps) {
                         h-10 w-10 rounded-full 
                         cursor-pointer
                         "
-                    src={user?.avatarUrl ?? '/user.png'}
+                    src={user?.avatarUrl ?? '/img/user.png'}
                     alt='user avatar' />
             </picture>
             {props.sideBar ? false : renderName()}
