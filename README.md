@@ -1,6 +1,6 @@
-<!-- <div align="center" id="top"> 
-  <img src="./.github/app.gif" alt="Project Model" />
-</div> -->
+<div align="center" id="top"> 
+  <img src="/public/admin-panel.gif" alt="Template Admin Panel" />
+</div>
 
 <h4 align="center">
 📊 POC: Template Admin Panel 📊
@@ -12,7 +12,7 @@
   <a href="#dart-about">About</a> &#xa0; | &#xa0;
   <a href="#sparkles-features">Features</a> &#xa0; | &#xa0;
   <a href="#computer-technologies--requirements">Technologies & Requirements</a> &#xa0; | &#xa0;
-  <a href="#clapper-show--off">Show Off</a> &#xa0; | &#xa0;
+  <a href="#clapper-show-off">Show Off</a> &#xa0; | &#xa0;
   <a href="#checkered_flag-starting">Starting</a> &#xa0; | &#xa0;
   <a href="#memo-license">License</a> &#xa0; | &#xa0;
   <a href="#gem-deploy--repository">Deploy & Repository</a> &#xa0; | &#xa0;
@@ -23,7 +23,7 @@
 
 ## :dart: About ##
 
-The proof of concept (POC) has developed to understand ideas and expand learning with NextJS, Tailwind, and Firebase framework. Furthermore, it aims to create a web application to sign up, in, and out through Firebase authentication with google and email. 
+The proof of concept (POC) has developed to understand ideas and expand learning with NextJS, Tailwindcss, and Firebase framework. Furthermore, it aims to create a web application to sign up, in, and out through Firebase authentication with google and email. 
 
 ## :sparkles: Features ##
 
@@ -42,40 +42,35 @@ The proof of concept (POC) has developed to understand ideas and expand learning
 
 The following dependencies were used in this project:
 
-- [TypeScript](https://www.typescriptlang.org/)
--
+- Next
+- Firebase
+- React
+- React-dom
+- Tailwindcss
+- Typescript
+- JS-Cookie
 
 ## :clapper: Show Off ##
 
-<img src="public/admin-panel.gif" alt="show off application" width="388" height="279">
+<img src="public/admin-panel.gif" alt="show off application" width="1140" height="641">
 
 ## :checkered_flag: Starting ##
 
-Before starting :checkered_flag:, you need to have [Git](https://git-scm.com) and [Yarn](https://yarnpkg.com/) installed.
+Before starting :checkered_flag:, you need to have [Git](https://git-scm.com) and [Npm](https://www.npmjs.com/) installed.
 
 ```bash
 # Clone this project
-$ git clone git@github.com:KayoRenato/projectmodel.git <Project-Name> 
+$ git clone git@github.com:KayoRenato/admin-template.git <Project-Name> 
+
 
 # Access
 $ cd <Project-Name>
 
 # Install dependencies
-$ yarn
-
-# ESLint Init and Prettier
-yarn eslint --init
-
-# PS. Follow instrutuin in note and used Airbnb Style
-# [link](https://confusion-chamomile-f85.notion.site/Configura-o-ESLint-e-Prettier-8beb2ee9e81641328258b717d1ca07e2)
-
-# Check dependencies
-$ yarn dep-check
-
-# PS. Not update ESLint
+$ npm i
 
 # Run the project
-$ yarn dev
+$ npm run dev
 
 # The server will initialize in the <http://localhost:3333>
 ```
