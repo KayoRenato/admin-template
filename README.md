@@ -69,6 +69,13 @@ $ cd <Project-Name>
 # Install dependencies
 $ npm i
 
+# Create Auth Firebase Project and get environment variables:
+  - apiKey 
+  - authdDomain 
+  - projectId  
+
+# Create file .env in root like sample.env change environment variables
+
 # Run the project
 $ npm run dev
 
