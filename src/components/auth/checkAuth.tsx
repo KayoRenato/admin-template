@@ -1,6 +1,7 @@
 import Image from "next/image";
 import useAuthData from "../../data/hook/useAuthData";
 import router from "next/router";
+import Head from "next/head";
 
 export default function CheckAuth(props) {
 
@@ -9,7 +10,17 @@ export default function CheckAuth(props) {
     function renderContent() {
         return (
             <>
-                {props.children}
+                <Head>
+                    <script
+                        dangerouslySetInnerHTML={{
+                            __html: `
+                                if(!document.cookie?.includes("admin-templ-auth")){
+                                    window.location.href = "/authentication"
+                                }
+                            `
+                        }} />
+                </Head>
+                    {props.children}
             </>
         );
     }
