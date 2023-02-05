@@ -52,7 +52,7 @@ The following dependencies were used in this project:
 
 ## :clapper: Show Off ##
 
-<img src="public/admin-panel.gif" alt="show off application" width="800" height="600">
+<img src="public/admin-panel.gif" alt="show off application" >
 
 ## :checkered_flag: Starting ##
 
